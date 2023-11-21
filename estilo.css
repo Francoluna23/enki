@@ -225,6 +225,7 @@ section{
 }
 
 .proceso__cards > div {
+    padding: 2%;
     width: 20vw;
     max-width: 300px; /* Establece un ancho máximo para las tarjetas */
     height: 350px;
@@ -233,6 +234,18 @@ section{
     border-radius: 5px; /* Corregido a "5px" para una mejor visualización */
     box-sizing: border-box; /* Incluye el borde en el ancho y alto total */
 }
+/*-------------------aside----------------*/
+
+aside .whatsapp{
+    width: 70px;
+    height: 70px;
+    background-color: rgba(0, 133, 51, 0);
+    position: fixed;
+    top: 90vh;
+    left: 90vw;
+    transform: translate(-30%,-90%);
+}
+
 
 /*-------------------footer----------------*/
 
