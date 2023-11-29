@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 4.16px;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke: #090909;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1, .cls-4 {
+        stroke-linecap: round;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-width: 3.93px;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        stroke-width: 4.76px;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-2" d="m37.46,92.43c0-7.15,5.79-12.94,12.94-12.94s12.94,5.79,12.94,12.94"/>
+    <circle class="cls-2" cx="50.4" cy="70.5" r="8.55"/>
+    <path class="cls-2" d="m86.66,92.43c0-7.15,5.79-12.94,12.94-12.94s12.94,5.79,12.94,12.94"/>
+    <circle class="cls-2" cx="99.6" cy="70.5" r="8.55"/>
+    <path class="cls-3" d="m60.17,92.43c0-8.17,6.63-14.8,14.8-14.8s14.8,6.63,14.8,14.8"/>
+    <circle class="cls-2" cx="74.97" cy="67.35" r="9.78"/>
+  </g>
+  <path class="cls-4" d="m120.61,26.23c13.02,12.19,21.16,29.53,21.16,48.77,0,36.88-29.9,66.78-66.78,66.78S8.22,111.88,8.22,75,38.12,8.22,75,8.22c13.83,0,26.68,4.2,37.34,11.4"/>
+  <path class="cls-1" d="m75,133.29c-32.2,0-58.29-26.1-58.29-58.29s26.1-58.29,58.29-58.29c1.51,0,3,.06,4.49.17"/>
+  <path class="cls-1" d="m112.21,119.87c-1.04.86-2.1,1.69-3.2,2.47"/>
+  <path class="cls-1" d="m124.21,106.26c-2.16,3.4-4.67,6.56-7.47,9.44"/>
+</svg>

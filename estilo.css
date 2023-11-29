@@ -1,14 +1,14 @@
 :root {
     --footer-background: #121a29;
     --text-color: #FAFBFC;
-    --text-gray: #f87306;
+    --text-orange: #f87306;
     --text-heading-gray: #F4F5F6;
     --text-primary: #FAFBFC;
     --button-color: #404652;
     --button-border: #6B707C;
 }
 
-*, *::after, *::before{
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -40,8 +40,8 @@ body{
     transition: background-color 1s;
 }
 .header.scrolled {
-    background: linear-gradient(to bottom, #111111d0, rgba(20, 20, 20, 0));
-    background-color: #111111d0;
+    background: linear-gradient(to bottom, #111111, rgba(20, 20, 20, 0));
+    background-color: #111111;
 }
 
 .header .logo{
@@ -66,7 +66,7 @@ body{
 
 .header .nav-links li{
     display: inline-block;
-    padding: o 20px;
+    padding: 0 20px;
 }
 
 .header .nav-links li:hover{
@@ -100,8 +100,9 @@ main {
     max-width: 100%;
 }
 
+
 .eslogan{
-    padding-top: 350px;
+    padding-top: 50vh;
     padding-left: 10vw;
     padding-right: 20vw;
     text-align: left;
@@ -113,109 +114,87 @@ main {
     font-size: 40px;
 }
 
-
 /* servicios columns */
-section{
-    display: flex;
-}
-
 .servicios {
-    background-color: rgb(255, 253, 253);
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    padding: 3vw;
+    padding-top: 20vh;
+    text-align: left; /* Centra el contenido horizontalmente */
+}
+
+.servicios__titulo{
     display: flex;
-    align-items: center; /* Centra verticalmente */
-    justify-content: center; /* Centra horizontalmente */
-    gap: 16px;
-    padding: 24px 8px 16px 8px;
-    margin: 0 auto;
-    max-width: 800px;
-}
-
-.servicios__content {
-    flex: 1;
-    text-align: left;
-    display: flex;
-    flex-direction: column; /* Cambiado a columna para apilar el h3 y la lista verticalmente */
-}
-
-.servicios ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 30vw;
-}
-
-.servicios ul li {
-    margin-bottom: 16px;
-}
-
-.servicios h3 {
-    color: var(--footer-background);
-    margin-top: 0;
-    margin-bottom: 25px;
-    font-size: 1.125rem;
-}
-
-.servicios > section {
-    flex: 1; /* Ocupa el espacio disponible igualmente entre la imagen y el texto */
-    text-align: left; /* Alinea el texto a la izquierda */
-}
-
-.servicios__img {
-    display: flex;
-    flex-direction: column; /* Columna para centrar verticalmente */
-    align-items: flex-start; /* Alinea la imagen a la izquierda */
-    gap: 16px;
-    color: var(--text-color);
-}
-
-.servicios__img img {
-    stroke: var(--text-color);
-    stroke-width: 8px;
-    max-width: 100%;
-    height: auto;
-}
-
-/*------------------nosotros ------------------*/
-
-.nosotros {
-    background-color: rgb(226, 166, 166);
-    display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
-    flex: 2 0 140px;
-    width: 100%;
-    gap: 16px;
-    padding: 24px 8px 16px 8px;
-    margin: 0 auto;
+    justify-content: center;
+    font-size: 30px;
+}
+.servicios__titulo-texto {
+    width: 1500px;
+    margin-left: 6vw;
 }
 
-.nosotros p {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+.servicios__titulo-texto h2 {
+    width: 225px;
+    height: 55px;
+    background-color: black;
+    clip-path: polygon(15% 0, 100% 0, 85% 100%, 0% 100%);
+}
+.servicios__titulo-texto p {
+    text-align: center;
+    font-size: 80%;
+    color: white;
+}
+
+.servicios__colum {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.servicios__colum-foto {
+    width: 75px;
+    height: 75px;
+}
+
+.servicios__colum > div {
+    padding: 5%;
+    padding-top: 2%;
     width: 30vw;
-    margin-bottom: 16px;
+    max-width: 500px; /* Establece un ancho máximo para las tarjetas */
+    height: 450px;
+    color: #808080;
+    background-color: #ffffff;
+    margin: 5px;
+    box-sizing: border-box; /* Incluye el borde en el ancho y alto total */
+}
+.servicios__colum h4{
+    margin-top: 16px;
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-family: 'Poppins';
+    color: #ff5200;
+}
+.servicios__colum span{
+    font-family: 'Poppins';
+    color: #808080;
+    font-weight: lighter;
+    font-size: 18px;
 }
 
-.nosotros h1 {
-    color: var(--footer-background);
-    margin-top: 0;
-    margin-bottom: 25px;
-    font-size: 1.125rem;
-}
+
 
 /*------------------proceso ------------------*/
 
 .proceso {
-    background-color: rgb(87, 86, 86);
+    background-color: rgb(255, 255, 255);
     padding: 3vw;
     text-align: center; /* Centra el contenido horizontalmente */
 }
 
 .proceso__titulo {
     margin-bottom: 15px;
-    color: white; /* Cambia el color del texto a blanco o el deseado */
+    color: rgb(0, 0, 0); /* Cambia el color del texto a blanco o el deseado */
 }
 
 .proceso__cards {
@@ -229,11 +208,41 @@ section{
     width: 20vw;
     max-width: 300px; /* Establece un ancho máximo para las tarjetas */
     height: 350px;
-    background-color: #F4F5F6;
+    color: #F4F5F6;
+    background-color: #494949;
     margin: 5px;
     border-radius: 5px; /* Corregido a "5px" para una mejor visualización */
     box-sizing: border-box; /* Incluye el borde en el ancho y alto total */
 }
+
+/*------------------nosotros ------------------*/
+
+.nosotros {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 2 0 140px;
+    width: 100%;
+    gap: 16px;
+    padding: 24px 8px 16px 8px;
+    margin: 0 auto;
+}
+
+.nosotros__div {
+    width: 50%;
+}
+
+.nosotros__div p {
+    margin-bottom: 16px;
+}
+
+.nosotros__div h1 {
+    color: var(--footer-background);
+    margin-bottom: 25px;
+    font-size: 1.125rem;
+}
+
 /*-------------------aside----------------*/
 
 aside .whatsapp{
@@ -307,7 +316,7 @@ footer {
     cursor: pointer;
     background-color: var(--button-color);
     border-radius: 8px;
-    color: rgb(218, 116, 116);
+    color: #ff5200;
     font-size: 1.25rem;
     min-width: 120px;
     min-height: 36px;
@@ -333,7 +342,7 @@ footer {
     padding: 16px 0px;
     flex-wrap: wrap;
     justify-content: space-between;
-    color: var(--text-gray);
+    color: #ffffff;
 }
 
 .footer-bottom > small {
@@ -347,7 +356,7 @@ footer {
 }
 
 .footer-headline > p {
-    color: var(--text-gray);
+    color: var(--text-orange);
     margin: 4px 0px 20px 0px;
 }
 
@@ -356,7 +365,12 @@ footer {
     min-width: 40px;
     width: 100%;
     height: 2px;
-    background-color: var(--text-gray);
+    background-color: var(--text-orange);
+}
+
+.footer-subscribe :hover{
+    color: #F4F5F6;
+    background-color: #111111;
 }
 
 .social-links {
@@ -407,3 +421,4 @@ footer {
         margin: 0 auto;
     }
 }
+
