@@ -38,6 +38,7 @@ body{
     padding: 5px 5%;
     position: fixed;
     transition: background-color 1s;
+    z-index: 1000;
 }
 .header.scrolled {
     background: linear-gradient(to bottom, #111111, rgba(20, 20, 20, 0));
@@ -120,7 +121,7 @@ main {
     width: 100vw;
     background-color: rgb(255, 255, 255);
     padding: 3vw;
-    padding-top: 20vh;
+    padding-top: 15vh;
     text-align: left; /* Centra el contenido horizontalmente */
 }
 
@@ -128,22 +129,23 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    font-size: 30px;
+    font-size: 32px;
 }
 .servicios__titulo-texto {
     width: 1500px;
     margin-left: 6vw;
+    z-index: 0;
 }
 
 .servicios__titulo-texto h2 {
-    width: 225px;
-    height: 55px;
+    width: 290px;
+    height: 75px;
     background-color: black;
     clip-path: polygon(15% 0, 100% 0, 85% 100%, 0% 100%);
 }
 .servicios__titulo-texto p {
     text-align: center;
-    font-size: 80%;
+    font-size: 100%;
     color: white;
 }
 
@@ -159,7 +161,7 @@ main {
 
 .servicios__colum > div {
     padding: 5%;
-    padding-top: 2%;
+    padding-top: 4%;
     width: 30vw;
     max-width: 500px; /* Establece un ancho máximo para las tarjetas */
     height: 450px;
@@ -193,7 +195,7 @@ main {
 }
 
 .proceso__titulo {
-    margin-bottom: 15px;
+    margin-bottom: 40px;
     color: rgb(0, 0, 0); /* Cambia el color del texto a blanco o el deseado */
 }
 
@@ -207,12 +209,89 @@ main {
     padding: 2%;
     width: 20vw;
     max-width: 300px; /* Establece un ancho máximo para las tarjetas */
-    height: 350px;
-    color: #F4F5F6;
-    background-color: #494949;
+    height: 400px;
+    color: #000000;
+    background-color: #ff5100d3;
     margin: 5px;
+    font-weight: bold;
     border-radius: 5px; /* Corregido a "5px" para una mejor visualización */
     box-sizing: border-box; /* Incluye el borde en el ancho y alto total */
+}
+
+.proceso__cards #p1:hover{
+    position: relative;
+    background-color: white;
+    color: #000000;
+    transition: ease .2s;
+    z-index: 10;
+}
+.proceso__cards #p1:hover::before{
+    content: "";
+    background-image: url(./img/investigacion\ y\ analisis.png);
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.proceso__cards #p2:hover{
+    position: relative;
+    background-color: white;
+    color: #000000;
+    transition: ease .2s;
+    z-index: 10;
+}
+.proceso__cards #p2:hover::before{
+    content: "";
+    background-image: url(./img/Estrategia\ y\ planificación.png);
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.proceso__cards #p3:hover{
+    position: relative;
+    background-color: white;
+    color: #000000;
+    transition: ease .2s;
+    z-index: 10;
+}
+.proceso__cards #p3:hover::before{
+    content: "";
+    background-image: url(./img/Implementación\ y\ ejecución.png);
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.proceso__cards #p4:hover{
+    position: relative;
+    background-color: white;
+    color: #000000;
+    transition: ease .2s;
+    z-index: 10;
+}
+.proceso__cards #p4:hover::before{
+    content: "";
+    background-image: url(./img/Seguimiento\ y\ optimización.png);
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
 }
 
 /*------------------nosotros ------------------*/
