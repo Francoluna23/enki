@@ -79,10 +79,18 @@ body{
     color: antiquewhite;
     text-decoration: none;
     margin: 10px;
+    position: relative;
+    display: inline-block;
 }
 
-.header .nav-links li a:hover{
-    color: #111111;
+.header .nav-links li a:hover::after{
+    content: "";
+    left: 0;
+    bottom: -3px; /* ajusta la posición vertical del subrayado según sea necesario */
+    width: 30px; /* ajusta la longitud del subrayado según sea necesario */
+    height: 2px; /* ajusta el grosor del subrayado según sea necesario */
+    background-color: rgb(255, 255, 255); /* color del subrayado */
+    position: absolute;
 }
 .header.scrolled .nav-links li a:hover{
     color: #ff5200;
@@ -164,7 +172,7 @@ main {
     padding-top: 4%;
     width: 30vw;
     max-width: 500px; /* Establece un ancho máximo para las tarjetas */
-    height: 450px;
+    height: 40px;
     color: #808080;
     background-color: #ffffff;
     margin: 5px;
@@ -189,14 +197,26 @@ main {
 /*------------------proceso ------------------*/
 
 .proceso {
-    background-color: rgb(255, 255, 255);
+
+    height: 70vh;
+    width: 100vw;
     padding: 3vw;
-    text-align: center; /* Centra el contenido horizontalmente */
+    background-color: #161616;
+    background-image: url(./img/proceso__fondo.png);
+    background-size: 100%;
+    opacity: .94;
+    background-position: center;
+    text-align: left; /* Centra el contenido horizontalmente */
 }
 
 .proceso__titulo {
+    padding: 1vh 2vh;
     margin-bottom: 40px;
-    color: rgb(0, 0, 0); /* Cambia el color del texto a blanco o el deseado */
+    margin-left: 11vw;
+    font-size: 44px;
+    color: #090909; /* Cambia el color del texto a blanco o el deseado */
+    background-color: #F4F5F6;
+    display: inline-block;
 }
 
 .proceso__cards {
@@ -206,28 +226,39 @@ main {
 }
 
 .proceso__cards > div {
-    padding: 2%;
+    padding: 1%;
     width: 20vw;
-    max-width: 300px; /* Establece un ancho máximo para las tarjetas */
-    height: 400px;
-    color: #000000;
+    max-width: 290px; /* Establece un ancho máximo para las tarjetas */
+    height: 340px;
+    color: #ffffff;
     background-color: #ff5100d3;
-    margin: 5px;
-    font-weight: bold;
-    border-radius: 5px; /* Corregido a "5px" para una mejor visualización */
+    margin: 35px;
+    border-radius: 20px; 
     box-sizing: border-box; /* Incluye el borde en el ancho y alto total */
+}
+
+.proceso__cards h4{
+    padding-top: 5%;
+}
+
+.proceso__cards p{
+    padding-top: 10%;
+    font-size: 15px;
 }
 
 .proceso__cards #p1:hover{
     position: relative;
-    background-color: white;
-    color: #000000;
+    background-color: #ff5100;
+    color: white;
     transition: ease .2s;
     z-index: 10;
 }
+
 .proceso__cards #p1:hover::before{
     content: "";
     background-image: url(./img/investigacion\ y\ analisis.png);
+    background-size: 100%;
+    border-radius: 20px; 
     opacity: 0.2;
     position: absolute;
     top: 0;
@@ -239,14 +270,16 @@ main {
 
 .proceso__cards #p2:hover{
     position: relative;
-    background-color: white;
-    color: #000000;
+    background-color: #ff5100;
+    color: white;
     transition: ease .2s;
     z-index: 10;
 }
 .proceso__cards #p2:hover::before{
     content: "";
     background-image: url(./img/Estrategia\ y\ planificación.png);
+    background-size: 100%;
+    border-radius: 20px; 
     opacity: 0.2;
     position: absolute;
     top: 0;
@@ -258,14 +291,16 @@ main {
 
 .proceso__cards #p3:hover{
     position: relative;
-    background-color: white;
-    color: #000000;
+    background-color: #ff5100;
+    color: white;
     transition: ease .2s;
     z-index: 10;
 }
 .proceso__cards #p3:hover::before{
     content: "";
     background-image: url(./img/Implementación\ y\ ejecución.png);
+    background-size: 100%;
+    border-radius: 20px; 
     opacity: 0.2;
     position: absolute;
     top: 0;
@@ -277,14 +312,16 @@ main {
 
 .proceso__cards #p4:hover{
     position: relative;
-    background-color: white;
-    color: #000000;
+    background-color: #ff5100;
+    color: white;
     transition: ease .2s;
     z-index: 10;
 }
 .proceso__cards #p4:hover::before{
     content: "";
     background-image: url(./img/Seguimiento\ y\ optimización.png);
+    background-size: 100%;
+    border-radius: 20px; 
     opacity: 0.2;
     position: absolute;
     top: 0;
@@ -297,19 +334,23 @@ main {
 /*------------------nosotros ------------------*/
 
 .nosotros {
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     flex: 2 0 140px;
-    width: 100%;
     gap: 16px;
     padding: 24px 8px 16px 8px;
     margin: 0 auto;
 }
 
 .nosotros__div {
+    padding-top: 30vh;
     width: 50%;
+    padding-right: 50px;
 }
 
 .nosotros__div p {
