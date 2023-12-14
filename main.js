@@ -8,3 +8,4 @@ window.onscroll = function() {scrollFunction()};
             header.classList.remove("scrolled");
         }
     }
+

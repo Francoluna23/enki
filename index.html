@@ -28,8 +28,9 @@
                 <li><a href="#C">Contactanos</a></li>
             </ul>
         </nav>
+        
     </header>
-    
+    <div class="fondo"></div>
     <main>
         <div class="contenedor__eslogan">
             <h1 class="eslogan"><p>Alcanzá tus objetivos<br>comerciales con nuestras<br>soluciones en marketing digital.</p></h1>
@@ -59,32 +60,54 @@
             </div>
         </div>        
         <div class="proceso">
-            <h2 class="proceso__titulo">Nuestro proceso</h2>
-            <div class="proceso__cards">
-                <div id="p1">
-                    <h4>Investigación y Análisis</h4><br><br><p>Utilizamos herramientas de investigación de mercado, encuestas, análisis de datos y otras fuentes de información para obtener una comprensión profunda de tu mercado objetivo.</p>
-                </div>   
-                <div id="p2">
-                    <h4>Estrategia y planificación</h4><br><br><p>Definimos tus objetivos comerciales, identificamos los segmentos de mercado a los que te dirigirás, establecemos las tácticas de marketing que utilizarás y creamos un plan detallado para implementar tus estrategias.</p>
-                </div>  
-                <div id="p3">
-                    <h4>Implementación y ejecución</h4><br><br><p>Implementamos las tácticas de marketing identificadas en tu plan y ejecutamos tus campañas. Implementamos las tácticas de marketing identificadas en tu plan y ejecutamos tus campañas.</p>
-                </div>  
-                <div id="p4">
-                    <h4>Seguimiento y optimización</h4><br><br><p>Utilizamos herramientas de análisis para evaluar el rendimiento de tus campañas, medimos métricas claves como el tráfico del sitio web, las conversiones, el compromiso de los usuarios y el retorno de la inversión(ROI).</p>
-                </div>       
+            <div class="proceso__contenedor">
+                <div class="proceso__titulo">
+                    <h1>Nuestro proceso</h1>
+                </div>
+                <div class="proceso__cards">
+                    <div class="proceso__cards-text" id="p1">
+                        <h4>Investigación y Análisis</h4>
+                        <div class="proceso__cards-text-2"><p>Utilizamos herramientas de investigación de mercado, encuestas, análisis de datos y otras fuentes de información para obtener una comprensión profunda de tu mercado objetivo.</p></div>
+                    </div>   
+                    <div class="proceso__cards-text" id="p2">
+                        <h4>Estrategia y planificación</h4>
+                        <div class="proceso__cards-text-2"><p>Definimos tus objetivos comerciales, identificamos los segmentos de mercado a los que te dirigirás, establecemos las tácticas de marketing que utilizarás y creamos un plan detallado para implementar tus estrategias.</p></div>
+                    </div>  
+                    <div class="proceso__cards-text" id="p3">
+                        <h4>Implementación y ejecución</h4>
+                        <div class="proceso__cards-text-2"><p>Implementamos las tácticas de marketing identificadas en tu plan y ejecutamos tus campañas. Implementamos las tácticas de marketing identificadas en tu plan y ejecutamos tus campañas.</p></div>
+                    </div>  
+                    <div class="proceso__cards-text" id="p4">
+                        <h4>Seguimiento y optimización</h4>
+                        <div class="proceso__cards-text-2"><p>Utilizamos herramientas de análisis para evaluar el rendimiento de tus campañas, medimos métricas claves como el tráfico del sitio web, las conversiones, el compromiso de los usuarios y el retorno de la inversión(ROI).</p></div>
+                    </div>       
+                </div>
             </div>
         </div>
-        <div class="nosotros">
-            <div class="nosotros__div">
-                <h1 id="SN">Sobre nosotros</h1>
-                <p>Nuestro equipo está formado por profesionales talentosos y apasionados que se mantienen actualizados con las últimas tendencias y técnicas de marketing. Nos esforzamos por ofrecer soluciones innovadoras y adaptarnos a los cambios constantes en el mundo digital. Con un enfoque en la colaboración y la comunicación abierta, trabajamos en estrecha colaboración con nuestros clientes para asegurarnos de que sus metas y objetivos sean alcanzados de manera exitosa.<br>Valoramos la transparencia, la ética y la calidad en todo lo que hacemos. Nuestra dedicación a la excelencia nos impulsa a superar las expectativas y ofrecer resultados medibles y significativos. No solo nos enfocamos en impulsar el crecimiento de nuestros clientes, sino que también nos esforzamos por construir relaciones de confianza y a largo plazo.</p>        
+        <div class="nosotros" id="SN">
+            <div class="nosotros__info">
+                <h1>Sobre nosotros</h1>
+                <p>Nuestro equipo está formado por profesionales talentosos y apasionados que se mantienen actualizados con las últimas tendencias y técnicas de marketing. Nos esforzamos por ofrecer soluciones innovadoras y adaptarnos a los cambios constantes en el mundo digital. Con un enfoque en la colaboración y la comunicación abierta, trabajamos en estrecha colaboración con nuestros clientes para asegurarnos de que sus metas y objetivos sean alcanzados de manera exitosa.<br><br>Valoramos la transparencia, la ética y la calidad en todo lo que hacemos. Nuestra dedicación a la excelencia nos impulsa a superar las expectativas y ofrecer resultados medibles y significativos. No solo nos enfocamos en impulsar el crecimiento de nuestros clientes, sino que también nos esforzamos por construir relaciones de confianza y a largo plazo.</p>        
+            </div>
+            <div class="nosotros__img">
+                <div class="nosotros__img-img ceo-1"></div>
+                <div class="nosotros__img-img ceo-2"></div>
+            </div>
+            <div class="nosotros__ceo">
+                <div class="nosotros__ceo-ceo"><h1></h1><p> CEO - Marketing Mánager</p></div>
+                <div class="nosotros__ceo-ceo"><h1></h1><p> CEO - Graphic Designer</p></div>
             </div>
         </div>
     </main>
     <aside>
+        <div class="scrollbar">
+            <div class="scrollbar__button"><a href="#">On top</a> </div>
+            <div class="scrollbar__line" id="scrollbarLine"></div>
+        </div>  
         <div class="whatsapp">
-            <img src="img/whatsapp_layout_5.svg">
+            <a href="https://wa.me/2346588475" target="_blank">
+                <img src="img/whatsapp_layout_5.svg" alt="WhatsApp">
+            </a>
         </div>        
     </aside>
     <footer>
@@ -127,5 +150,8 @@
             </div>
         </div>
     </footer>
+    <footer2></footer2>
+    <script src="script.js"></script>
+    <script src="fondo.js"></script>
 </body>
 </html>

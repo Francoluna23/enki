@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Example</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .contenedor {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 80vh; /* Ajusta la altura como desees */
+      width: 100vw;
+      background-image: url(./img/proceso__fondo.png); /* Reemplaza con la ruta de tu imagen de fondo */
+      background-size: 100%;
+      background-position: center;
+      opacity: .94;
+    }
+
+    .contenedor__2 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 50vh;      
+      width: 70vw;
+    }
+
+    .contenedor__2-1 {
+      margin-bottom: 10px; /* Ajusta el espacio entre el título y las tarjetas según sea necesario */
+      color: #090909;
+      background-color: #F4F5F6;
+      display: inline-block;
+      /*font-size: 44px;*/
+    }
+
+    .contenedor__2-2 {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      color: aliceblue;
+    }
+
+    .contenedor__2-2 div {
+      width: 15vw;
+      height: 40vh;
+      /* Ajusta el ancho de las tarjetas según sea necesario */
+      border: 1px solid rgb(240, 238, 238); /* Puedes personalizar el borde según tus preferencias */
+      color: #ffffff;
+      background-color: #ff5100;
+      border-radius: 20px; 
+      box-sizing: border-box; /* Incluye el borde en el ancho y alto total */
+      overflow: hidden;
+    }
+
+    .contenedor__2-2 h4{
+      padding-top: 5%;
+      font-size: 0.9vw;
+    }
+    .contenedor__2-2 p{
+      padding-top: 10%;
+      font-size: 0.8vw;
+    }
+
+    .contenedor__2-2 #p1:hover{
+      position: relative;
+      background-color: #080808;
+      color: white;
+      transition: ease .2s;
+      z-index: 10;
+    }
+
+    .contenedor__2-2 #p1:hover::before{
+      content: "";
+      background-image: url(./img/investigacion\ y\ analisis.png);
+      background-size: 100%;
+      border-radius: 20px; 
+      opacity: 0.2;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+    }
+    .contenedor__2-2 #p2:hover{
+      position: relative;
+      background-color: #080808;
+      color: white;
+      transition: ease .2s;
+      z-index: 10;
+    }
+
+    .contenedor__2-2 #p2:hover::before{
+      content: "";
+      background-image: url(./img/investigacion\ y\ analisis.png);
+      background-size: 100%;
+      border-radius: 20px; 
+      opacity: 0.2;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+    }
+    .contenedor__2-2 #p3:hover{
+      position: relative;
+      background-color: #080808;
+      color: white;
+      transition: ease .2s;
+      z-index: 10;
+    }
+
+    .contenedor__2-2 #p3:hover::before{
+      content: "";
+      background-image: url(./img/investigacion\ y\ analisis.png);
+      background-size: 100%;
+      border-radius: 20px; 
+      opacity: 0.2;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+    }
+    .contenedor__2-2 #p4:hover{
+      position: relative;
+      background-color: #080808;
+      color: white;
+      transition: ease .2s;
+      z-index: 10;
+    }
+
+    .contenedor__2-2 #p4:hover::before{
+      content: "";
+      background-image: url(./img/investigacion\ y\ analisis.png);
+      background-size: 100%;
+      border-radius: 20px; 
+      opacity: 0.2;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <div class="contenedor__2">
+      <div class="contenedor__2-1">
+        <h1>Nuestro proceso</h1>
+      </div>
+      <div class="contenedor__2-2">
+        <div id="p1"><h4>Investigación y Análisis</h4><br><br><p>Utilizamos herramientas de investigación de mercado, encuestas, análisis de datos y otras fuentes de información para obtener una comprensión profunda de tu mercado objetivo.</p></div>
+        <div id="p2"><h4>Estrategia y planificación</h4><br><br><p>Definimos tus objetivos comerciales, identificamos los segmentos de mercado a los que te dirigirás, establecemos las tácticas de marketing que utilizarás y creamos un plan detallado para implementar tus estrategias.</p></div>
+        <div id="p3"><h4>Implementación y ejecución</h4><br><br><p>Implementamos las tácticas de marketing identificadas en tu plan y ejecutamos tus campañas. Implementamos las tácticas de marketing identificadas en tu plan y ejecutamos tus campañas.</p></div>
+        <div id="p4"><h4>Seguimiento y optimización</h4><br><br><p>Utilizamos herramientas de análisis para evaluar el rendimiento de tus campañas, medimos métricas claves como el tráfico del sitio web, las conversiones, el compromiso de los usuarios y el retorno de la inversión(ROI).</p></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+.proceso {
+    height: 80vh;
+    width: 100vw;
+    padding: 3vw;
+    background-color: #161616;
+    background-image: url(./img/proceso__fondo.png);
+    background-size: 100%;
+    opacity: .94;
+    background-position: center;
+    text-align: left; /* Centra el contenido horizontalmente */
+}
+
+.proceso__titulo {
+    padding: 1vh 2vh;
+    margin-bottom: 40px;
+    margin-left: 11vw;
+    font-size: 44px;
+    color: #090909; /* Cambia el color del texto a blanco o el deseado */
+    background-color: #F4F5F6;
+    display: inline-block;
+}
+
+.proceso__cards {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.proceso__cards > div {
+    padding: 1%;
+    /*width: 20vw;
+    max-width: 290px;  Establece un ancho máximo para las tarjetas */
+    max-width: 15vw;
+    max-height: 40vh;
+    color: #ffffff;
+    background-color: #ff5100;
+    margin: 35px;
+    border-radius: 20px; 
+    box-sizing: border-box; /* Incluye el borde en el ancho y alto total */
+    overflow: hidden;
+}

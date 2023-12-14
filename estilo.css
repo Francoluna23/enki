@@ -25,10 +25,12 @@ body{
     width: 100vw;
     max-width: 100%;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 /*-------------------navbar----------------*/
-.header{
+
+.header {
     background-color: rgba(20, 20, 20, 0);
     display: flex;
     justify-content: space-between;
@@ -37,12 +39,18 @@ body{
     width: 100vw;
     padding: 5px 5%;
     position: fixed;
-    transition: background-color 1s;
     z-index: 1000;
-}
-.header.scrolled {
-    background: linear-gradient(to bottom, #111111, rgba(20, 20, 20, 0));
-    background-color: #111111;
+  }
+
+.fondo {
+    display: flex;
+    position: fixed;
+    height: 90px;
+    width: 100vw;
+    transform: translateY(-90px);
+    background-color: #020202;
+    transition: transform 0.3s ease;
+    z-index: 900;
 }
 
 .header .logo{
@@ -55,10 +63,6 @@ body{
     height: 45px;
     width: auto;
     transition: all .3s;
-}
-
-.header .logo img:hover{
-    transform: scale(1);
 }
 
 .header .nav-links{
@@ -197,58 +201,75 @@ main {
 /*------------------proceso ------------------*/
 
 .proceso {
-
-    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; /* Ajusta la altura como desees */
     width: 100vw;
-    padding: 3vw;
-    background-color: #161616;
-    background-image: url(./img/proceso__fondo.png);
-    background-size: 100%;
-    opacity: .94;
+    background-image: url(./img/proceso__fondo.png); /* Reemplaza con la ruta de tu imagen de fondo */
+    background-size: 103%;
     background-position: center;
-    text-align: left; /* Centra el contenido horizontalmente */
+    opacity: .94;
+}
+
+.proceso__contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 50vh;      
+    width: 80vw;
 }
 
 .proceso__titulo {
-    padding: 1vh 2vh;
-    margin-bottom: 40px;
-    margin-left: 11vw;
-    font-size: 44px;
-    color: #090909; /* Cambia el color del texto a blanco o el deseado */
+    padding: 5px 10px;
+    margin-bottom: 60px; /* Ajusta el espacio entre el título y las tarjetas según sea necesario */
+    color: #090909;
     background-color: #F4F5F6;
     display: inline-block;
+    font-size: 1.3vw;
 }
 
 .proceso__cards {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .proceso__cards > div {
-    padding: 1%;
-    width: 20vw;
-    max-width: 290px; /* Establece un ancho máximo para las tarjetas */
-    height: 340px;
+    width: 16vw;
+    height: 40vh;    /* Ajusta el ancho de las tarjetas según sea necesario */
     color: #ffffff;
-    background-color: #ff5100d3;
-    margin: 35px;
+    background-color: #ff5100;
     border-radius: 20px; 
     box-sizing: border-box; /* Incluye el borde en el ancho y alto total */
+    overflow: hidden;
 }
 
 .proceso__cards h4{
     padding-top: 5%;
+    padding-left: 5%;
+    font-size: .9vw;
 }
 
 .proceso__cards p{
-    padding-top: 10%;
-    font-size: 15px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: .8vw;
+}
+
+.proceso__cards-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+.proceso__cards-text-2{
+    height: 50%;
 }
 
 .proceso__cards #p1:hover{
     position: relative;
-    background-color: #ff5100;
+    background-color: #080808;
     color: white;
     transition: ease .2s;
     z-index: 10;
@@ -270,7 +291,7 @@ main {
 
 .proceso__cards #p2:hover{
     position: relative;
-    background-color: #ff5100;
+    background-color: #080808;
     color: white;
     transition: ease .2s;
     z-index: 10;
@@ -291,7 +312,7 @@ main {
 
 .proceso__cards #p3:hover{
     position: relative;
-    background-color: #ff5100;
+    background-color: #080808;
     color: white;
     transition: ease .2s;
     z-index: 10;
@@ -312,7 +333,7 @@ main {
 
 .proceso__cards #p4:hover{
     position: relative;
-    background-color: #ff5100;
+    background-color: #080808;
     color: white;
     transition: ease .2s;
     z-index: 10;
@@ -339,28 +360,78 @@ main {
     width: 100vw;
     background-color: rgb(255, 255, 255);
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    flex: 2 0 140px;
-    gap: 16px;
-    padding: 24px 8px 16px 8px;
-    margin: 0 auto;
+    flex-direction: row;
+    flex: 1;
 }
-
-.nosotros__div {
-    padding-top: 30vh;
-    width: 50%;
+.nosotros__info{
+    width: 100vw;
+    flex: 2;
+    padding-top: 20vh;
     padding-right: 50px;
+    padding-left: 150px;
 }
-
-.nosotros__div p {
+.nosotros__info p {
     margin-bottom: 16px;
+    margin-right: 10vw;
+    /*font-size: 20px;*/
+    font-size: 1vw;
 }
 
-.nosotros__div h1 {
-    color: var(--footer-background);
-    margin-bottom: 25px;
-    font-size: 1.125rem;
+.nosotros__info h1 {
+    padding: 1vh 2vh;
+    margin-bottom: 50px;
+    font-size: 42px;
+    color: #ffffff; 
+    background-color: #020202;
+    display: inline-block;
+}
+
+.nosotros__img{
+    margin-top: 60px;
+    display: flex;
+    width: 100vw;
+    flex: .9;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.nosotros__img-img{
+    width: 18vw;
+    height: 18vw;
+    clip-path: circle(50% at 50% 50%);
+}
+
+.ceo-1{
+    background-image: url(./img/mare.png);
+    background-size: 100%;
+}
+
+.ceo-2{
+    background-image: url(./img/mariano.png);
+    background-size: 100%;
+}
+
+
+.nosotros__ceo{
+    display: flex;
+    width: 100vw;
+    flex: 1.1;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.nosotros__ceo-ceo{
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+}
+
+.nosotros__ceo-ceo h1{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    clip-path: circle(50% at 50% 50%);
+    background-color: #f87306;
 }
 
 /*-------------------aside----------------*/
@@ -375,6 +446,37 @@ aside .whatsapp{
     transform: translate(-30%,-90%);
 }
 
+aside .whatsapp a {
+    display: block;
+    width: 70px;
+    height: 70px;
+}
+
+aside .whatsapp img {
+    width: 100%;
+    height: 100%;
+}
+
+.scrollbar__line{
+    display: flex;
+    width: 1px;
+    height: 25vh;
+    background-color: rgb(7, 7, 7);
+    position: fixed;
+    top: 50vh;
+    left: 3vw;
+}
+.scrollbar__button{
+    display: flex;
+    position: fixed;
+    top: 43vh;
+    left: 2.6vw;
+    writing-mode: vertical-lr;
+}
+.scrollbar__button a{
+    text-decoration: none;
+    color: #020202;
+}
 
 /*-------------------footer----------------*/
 
@@ -522,9 +624,10 @@ footer {
 }
 
 
+
 /*? mobile */
 
-@media (max-width: 800px) {
+@media only screen and (max-width: 800px) {
     .footer-top {
         display: flex;
         flex-direction: column;
@@ -542,3 +645,20 @@ footer {
     }
 }
 
+/*? tablets */
+
+@media only screen and (min-width: 801px) and (max-width: 1023px) {
+    .header .nav-links li{
+        padding: 0;
+    }
+}
+
+@keyframes scrollAnimation {
+    from {
+        background-color: rgba(20, 20, 20, 0);
+    }
+    to {
+        background: linear-gradient(to bottom, #111111, rgba(20, 20, 20, 0));
+        background-color: #111111;
+    }
+}
