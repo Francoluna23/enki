@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Obtén la referencia al elemento scrollbar__line
     const scrollbarLine = document.getElementById("scrollbarLine");
+    const scrollbarButton = document.getElementById("scrollbarButton");
 
     // Obtén la referencia al footer2
     const footer2 = document.querySelector("footer2");
@@ -27,3 +28,4 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollbarLine.style.backgroundColor = `rgb(${255 - adjustedPercentage * 2.55}, ${255 - adjustedPercentage * 2.55}, ${255 - adjustedPercentage * 2.55})`;
     });
 });
+

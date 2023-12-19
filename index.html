@@ -33,7 +33,7 @@
     <div class="fondo"></div>
     <main>
         <div class="contenedor__eslogan">
-            <h1 class="eslogan"><p>Alcanzá tus objetivos<br>comerciales con nuestras<br>soluciones en marketing digital.</p></h1>
+            <h1 class="eslogan" id="maquinaEscribir"></h1>
         </div>
         <div class="servicios" id="NS">
             <div class="servicios__titulo">
@@ -59,7 +59,7 @@
                 </div>  
             </div>
         </div>        
-        <div class="proceso">
+        <div class="proceso" id="targetDiv">
             <div class="proceso__contenedor">
                 <div class="proceso__titulo">
                     <h1>Nuestro proceso</h1>
@@ -90,8 +90,16 @@
                 <p>Nuestro equipo está formado por profesionales talentosos y apasionados que se mantienen actualizados con las últimas tendencias y técnicas de marketing. Nos esforzamos por ofrecer soluciones innovadoras y adaptarnos a los cambios constantes en el mundo digital. Con un enfoque en la colaboración y la comunicación abierta, trabajamos en estrecha colaboración con nuestros clientes para asegurarnos de que sus metas y objetivos sean alcanzados de manera exitosa.<br><br>Valoramos la transparencia, la ética y la calidad en todo lo que hacemos. Nuestra dedicación a la excelencia nos impulsa a superar las expectativas y ofrecer resultados medibles y significativos. No solo nos enfocamos en impulsar el crecimiento de nuestros clientes, sino que también nos esforzamos por construir relaciones de confianza y a largo plazo.</p>        
             </div>
             <div class="nosotros__img">
-                <div class="nosotros__img-img ceo-1"></div>
-                <div class="nosotros__img-img ceo-2"></div>
+                <div class="nosotros__img-img ceo-1">
+                    <div  class="nosotros__img-nombre">
+                        <h3>Mare</h3>
+                    </div>
+                </div>
+                <div class="nosotros__img-img ceo-2">
+                    <div class="nosotros__img-nombre">
+                        <h3>Mariano Serio</h3>
+                    </div>
+                </div>
             </div>
             <div class="nosotros__ceo">
                 <div class="nosotros__ceo-ceo"><h1></h1><p> CEO - Marketing Mánager</p></div>
@@ -101,12 +109,12 @@
     </main>
     <aside>
         <div class="scrollbar">
-            <div class="scrollbar__button"><a href="#">On top</a> </div>
+            <div class="scrollbar__button"><a id="scrollbarButton" href="#">On top</a> </div>
             <div class="scrollbar__line" id="scrollbarLine"></div>
         </div>  
         <div class="whatsapp">
-            <a href="https://wa.me/2346588475" target="_blank">
-                <img src="img/whatsapp_layout_5.svg" alt="WhatsApp">
+            <a href="https://wa.me/+5492346588475" target="_blank">
+                <img src="img/whatsapp_layout_5.png" alt="WhatsApp">
             </a>
         </div>        
     </aside>
@@ -121,7 +129,7 @@
                     </p>
                 </div>
                 <div class="footer-subscribe" id="C">
-                    <input type="email" spellcheck="false" placeholder="Tu correo electrónico">
+                    <input type="email" spellcheck="false" placeholder="Trabajemos juntos!">
                     <button>
                         Enviar
                     </button>
@@ -151,7 +159,34 @@
         </div>
     </footer>
     <footer2></footer2>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const eslogan = "Alcanzá tus objetivos\ncomerciales con nuestras\nsoluciones en marketing digital.";
+            const esloganElement = document.getElementById("maquinaEscribir");
+    
+            function escribirTexto(texto, elemento, velocidad) {
+                let i = 0;
+                const intervalo = setInterval(function () {
+                    if (i < texto.length) {
+                        if (texto.charAt(i) === "\n") {
+                            elemento.innerHTML += "<br>";
+                        } else if (texto.charAt(i) === " ") {
+                            elemento.innerHTML += "&nbsp;";
+                        } else {
+                            elemento.innerText += texto.charAt(i);
+                        }
+                        i++;
+                    } else {
+                        clearInterval(intervalo);
+                    }
+                }, velocidad);
+            }
+    
+            escribirTexto(eslogan, esloganElement, 50);
+        });
+    </script>
     <script src="script.js"></script>
     <script src="fondo.js"></script>
+    <script src="ontop.js"></script>
 </body>
 </html>
