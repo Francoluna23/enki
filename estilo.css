@@ -124,7 +124,7 @@ main {
     text-align: left;
     color: white;
     font-weight: bolder;
-    font-size: 40px;
+    font-size: 2.1vw;
     white-space: nowrap;
     overflow: hidden;
 }
@@ -429,8 +429,6 @@ main {
     width: 16vw;
     height: 16vw;
     border-radius: 50%;
-    box-shadow: 0px 15px 20px
-    rgba(0, 0, 0, 0.50);
     cursor: pointer;
 }
 
@@ -696,6 +694,81 @@ footer {
 /*? mobile */
 
 @media only screen and (max-width: 800px) {
+    .header .nav-links a {
+        font-size: 15px;
+        margin: 0;
+    }
+    .header .nav-links li {
+        padding-left: 88px;
+    }
+    .eslogan{
+        font-size: 5vw;
+    }
+    .contenedor__eslogan {
+        background-size: cover; /* Puedes ajustar esto según tus preferencias */
+    }
+    .servicios__titulo {
+        margin-top: -40px;
+        padding-bottom: 30px;
+    }
+    .servicios__colum > div {
+        margin: 0;
+    }
+    .servicios__colum span {
+        font-size: 15px;
+    }
+    .proceso__titulo {
+        font-size: 3vw;
+    }
+    .proceso__cards {
+        display: flex;
+        flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en filas adicionales */
+        justify-content: space-between;
+        width: 100%;
+    }    
+    .proceso__cards > div {
+        width: 48%; /* Establece el ancho de cada tarjeta para que haya dos tarjetas en una fila */
+        height: 24vh;
+    }
+    .proceso__cards-text {
+        margin-bottom: 2vh;
+    }
+    .proceso__cards-text h4{
+        font-size: 10px;
+    }
+    .proceso__cards-text p{
+        font-size: 7px;
+    }
+    .nosotros__info {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    .nosotros__info h1 {
+        font-size: 5vw;
+    }
+    .nosotros__info p {
+        font-size: 3.4vw;
+        margin-right: 0;
+    }
+    .nosotros__img{
+        display: none;
+    }
+    .nosotros__ceo{
+        display: none;
+    }
+    aside .whatsapp{
+        left: 80vw;
+    }
+
+    .scrollbar__line{
+        display: none;
+    }
+
+    .scrollbar__button{
+        display: none;
+    }
+
+
     .footer-top {
         display: flex;
         flex-direction: column;
