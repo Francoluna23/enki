@@ -791,7 +791,9 @@ footer {
         display: none;
     }
 
-
+    .footer-wrapper {
+        padding: 2px;
+    }
     .footer-top {
         display: flex;
         flex-direction: column;
@@ -807,9 +809,7 @@ footer {
         justify-content: center;
         margin: 0 auto;
     }
-    .footer-subscribe > button {
-        min-width: 50px;
-    }
+
 }
 
 /*? tablets */
