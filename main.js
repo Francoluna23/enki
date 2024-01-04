@@ -1,4 +1,11 @@
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {
+    if (window.innerWidth > 800) {
+        scrollFunction();
+        console.log("La resolución es suficientemente alta. Ejecutando el script...");
+    } else {
+        console.log("La resolución es demasiado baja. El script no se ejecutará.");
+    }
+};
     
     function scrollFunction() {
         var header = document.querySelector(".header");

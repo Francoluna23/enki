@@ -694,6 +694,16 @@ footer {
 /*? mobile */
 
 @media only screen and (max-width: 800px) {
+    .header {
+        display: flex;
+        position: fixed;
+        height: 90px;
+        width: 100vw;
+        background-color: #020202;
+        transition: transform 0.3s ease;
+        z-index: 900;
+        padding: 5px 0%;
+    }
     .header .nav-links a {
         font-size: 15px;
         margin: 0;
@@ -702,20 +712,33 @@ footer {
         padding-left: 88px;
     }
     .eslogan{
-        font-size: 5vw;
+        padding-left: 5vw;
+        padding-right: 15vw;
+        font-size: 5.5vw;
     }
     .contenedor__eslogan {
         background-size: cover; /* Puedes ajustar esto según tus preferencias */
     }
     .servicios__titulo {
-        margin-top: -40px;
-        padding-bottom: 30px;
+        margin-top: -20%;
+        padding-bottom: 20%;
+    }
+    .servicios__titulo-texto h2 {
+        width: 70%;
+        height: 100%;
+    }
+    .servicios__titulo-texto p {
+        font-size: 90%;
     }
     .servicios__colum > div {
-        margin: 0;
+        margin: 1px;
+        text-align: center;
+    }
+    .servicios__colum h4 {
+        font-size: 85%;
     }
     .servicios__colum span {
-        font-size: 15px;
+        font-size: 85%;
     }
     .proceso__titulo {
         font-size: 3vw;
@@ -783,6 +806,9 @@ footer {
         align-items: space-between;
         justify-content: center;
         margin: 0 auto;
+    }
+    .footer-subscribe > button {
+        min-width: 50px;
     }
 }
 
