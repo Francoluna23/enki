@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TVJBWSNQ');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XFWRRM4FVB"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XFWRRM4FVB');
+    </script>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Enki</title>
@@ -15,8 +31,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">   
     <link rel='icon' href='icon/E naranja.ico'>
     <script src='main.js'></script>
+    <script defer src="toggleBut.js"></script>
+    <script>
+        const imagePaths = [
+            'img/investigacion y analisis.png',
+            'img/Estrategia y planificación.png',
+            'img/Implementación y ejecución.png',
+            'img/Seguimiento y optimización.png'
+        ];
+
+        function preloadImages() {
+            for (let i = 0; i < imagePaths.length; i++) {
+            const image = new Image();
+            image.src = imagePaths[i];
+            }
+        }
+
+        window.onload = preloadImages;
+    </script>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVJBWSNQ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header class="header">
         <div class="logo">
             <a href="#" title="Facebook"><img src="./img/ENKI blanco.png" alt="Logo de la marca 'Enki'"></a>
@@ -28,7 +66,18 @@
                 <li><a href="#C">Contactanos</a></li>
             </ul>
         </nav>
-        
+    </header>
+    <header class="header2">
+        <div class="logo">
+            <a href="#" title="Facebook"><img src="./img/ENKI blanco.png" alt="Logo de la marca 'Enki'"></a>
+        </div>
+        <div class="links">
+            <ul class="nav-links">
+                <li><a href="#NS">Nuestros servicios</a></li>
+                <li><a href="#SN">Quienes somos</a></li>
+                <li><a href="#C">Contactanos</a></li>
+            </ul>
+        </div>          
     </header>
     <div class="fondo"></div>
     <main>
@@ -108,6 +157,12 @@
         </div>
     </main>
     <aside>
+        <div class="toggle">
+            <div class="toggle-button" id="myButton">
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div> 
         <div class="scrollbar">
             <div class="scrollbar__button"><a id="scrollbarButton" href="#">On top</a> </div>
             <div class="scrollbar__line" id="scrollbarLine"></div>
@@ -128,11 +183,21 @@
                         Ingrese su correo para recibir información detallada sobre nuestros servicios.
                     </p>
                 </div>
-                <div class="footer-subscribe" id="C">
-                    <input type="email" spellcheck="false" placeholder="Trabajemos juntos!">
-                    <button>
-                        Enviar
-                    </button>
+                <div class="footer-boxs">
+                    <form action="http://127.0.0.1:3000/enviar-correo" method="POST" id="formulario">
+                        <div  class="footer-subscribe formulario" id="C">
+                            <input type="email" spellcheck="false" placeholder="Trabajemos juntos!" name="correo">
+                            <button type="submit" id="original">
+                                Enviar
+                            </button>
+                        </div>
+                        <div  class="footer-subscribe-2 formulario" id="consulta-box">
+                            <textarea placeholder="Escribe tu consulta aquí" name="consulta" style="width: 100%; height: 10vh; background-color: transparent; font-size: 16px; color: white; padding-right: 0;padding-left: 10px;padding-top: 2px;"></textarea>
+                            <button type="submit" id="mobile">
+                                Enviar
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </section>
             <div class="footer-bottom">
@@ -159,34 +224,10 @@
         </div>
     </footer>
     <footer2></footer2>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const eslogan = "Alcanzá tus objetivos\ncomerciales con nuestras\nsoluciones en marketing digital.";
-            const esloganElement = document.getElementById("maquinaEscribir");
-    
-            function escribirTexto(texto, elemento, velocidad) {
-                let i = 0;
-                const intervalo = setInterval(function () {
-                    if (i < texto.length) {
-                        if (texto.charAt(i) === "\n") {
-                            elemento.innerHTML += "<br>";
-                        } else if (texto.charAt(i) === " ") {
-                            elemento.innerHTML += "&nbsp;";
-                        } else {
-                            elemento.innerText += texto.charAt(i);
-                        }
-                        i++;
-                    } else {
-                        clearInterval(intervalo);
-                    }
-                }, velocidad);
-            }
-    
-            escribirTexto(eslogan, esloganElement, 50);
-        });
-    </script>
+    <script src="maquinaEscribir.js"></script>
     <script src="script.js"></script>
     <script src="fondo.js"></script>
     <script src="ontop.js"></script>
+    <script src="mail.js"></script>           
 </body>
 </html>

@@ -28,11 +28,21 @@ body{
     overflow-x: hidden;
 }
 
-/*-------------------navbar----------------*/
-
+/*-------------------navbar---------------*/
 .header {
     background-color: rgba(20, 20, 20, 0);
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    width: 100vw;
+    padding: 5px 5%;
+    position: fixed;
+    z-index: 1000;
+}
+.header2 {
+    background-color: rgba(20, 20, 20, 0);
+    display: none;
     justify-content: space-between;
     align-items: center;
     height: 90px;
@@ -50,7 +60,7 @@ body{
     transform: translateY(-90px);
     background-color: #020202;
     transition: transform 0.3s ease;
-    z-index: 900;
+    z-index: 800;
 }
 
 .header .logo{
@@ -100,6 +110,61 @@ body{
 .header.scrolled .nav-links li a:hover{
     color: #ff5200;
 }
+.header2 .logo{
+    cursor: pointer;
+    padding-left: 5%;
+}
+
+.header2 .logo{
+    cursor: pointer;
+    padding-left: 5%;
+}
+
+.header2 .logo img{
+    padding-top: 5px;
+    height: 45px;
+    width: auto;
+    transition: all .3s;
+}
+
+.header2 .nav-links{
+    list-style: none;
+}
+
+.header2 .nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header2 .nav-links a{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 10px;
+    position: relative;
+    display: inline-block;   
+}
+.header2 .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; /* Altura de la línea */
+    background-color: rgb(255, 255, 255); /* Color de la línea */
+    transition: width .5s; /* Duración de la transición */
+  }
+.links{
+    height: 84%;
+}
+.header2 .nav-links a:hover::after {
+    width: 30px; /* Longitud final de la línea */
+}
+
+.header2.scrolled .nav-links li a:hover{
+    color: #ff5200;
+}
+
 
 /*-------------------main----------------*/
 main {
@@ -387,7 +452,7 @@ main {
 
 .nosotros {
     background-color: white;
-    height: 100vh;
+    height: 110vh;
     width: 100vw;
     background-color: rgb(255, 255, 255);
     display: flex;
@@ -499,7 +564,34 @@ color: #808080;
 }
 
 /*-------------------aside----------------*/
-
+aside .toggle-button {
+    width: 30px;
+    height: 30px;
+    z-index: 100000000000;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    position: fixed;
+    top: 10vh;
+    left: 90vw;
+    transform: translate(0%,-110%);
+    display: none;
+}
+  
+.line {
+    width: 80%;
+    height: 2px;
+    background-color: white;
+    transition: transform 0.1s;
+}
+  
+.toggleed .line:nth-child(1) {
+    transform: rotate(45deg);
+}
+  
+.toggleed .line:nth-child(2) {
+    margin-top: -16px;
+    transform: rotate(-45deg);
+}
 aside .whatsapp{
     width: 70px;
     height: 70px;
@@ -557,7 +649,7 @@ footer {
     align-items: center;
     flex-direction: column;
     margin-top: auto; /* Empuja el footer hacia abajo */
-    z-index: 100000;
+    z-index: 200;
 }
 
 .footer-wrapper {
@@ -582,6 +674,10 @@ footer {
 
 
 /*? footer subscribe */
+
+#mobile {
+    display: none;
+}
 .footer-subscribe {
     display: flex;
     gap: 12px;
@@ -618,6 +714,40 @@ footer {
     border: 0px;
     outline: none;
     border: 1px solid var(--button-border);
+}
+.footer-subscribe-2 > input {
+    border: 1px solid var(--button-border);
+    color: var(--text-color);
+    outline: none;
+    min-height: 36px;
+    background-color: var(--footer-background);
+    font-size: 1.2rem;
+    flex: 1 0 120px;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+.footer-subscribe-2 > button {
+    cursor: pointer;
+    background-color: var(--button-color);
+    border-radius: 8px;
+    color: #ff5200;
+    font-size: 1.25rem;
+    min-width: 120px;
+    min-height: 36px;
+    flex: 1 0 80px;
+    white-space: nowrap;
+    padding: 8px 12px;
+    border: 0px;
+    outline: none;
+    border: 1px solid var(--button-border);
+}
+
+/* Estilo para el nuevo cuadro de consulta */
+#consulta-box {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 16px; /* Puedes ajustar el margen según tus necesidades */
 }
 
 
@@ -694,7 +824,6 @@ footer {
 }
 
 
-
 /*? mobile */
 
 @media only screen and (max-width: 800px) {
@@ -702,6 +831,17 @@ footer {
         display: flex;
         position: fixed;
         height: 90px;
+        width: 100vw;
+        background-color: #020202;
+        transition: transform 0.3s ease;
+        z-index: 900;
+        padding: 5px 0%;
+    }
+    .header2 {
+        display: none;
+        flex-wrap: wrap;
+        position: fixed;
+        height: 100vh;
         width: 100vw;
         background-color: #020202;
         transition: transform 0.3s ease;
@@ -716,6 +856,28 @@ footer {
     .header .nav-links li {
         padding-left: 85px;
         padding-right: 0;
+    }
+    .header2 .nav-links li {
+        float: right;
+        padding-left: 60px;
+        padding-right: 0;
+        margin-top: 10px;
+    }
+    .header .nav-links{
+        display: none;
+    }
+
+    aside .toggle-button {
+        width: 30px;
+        height: 30px;
+        margin-right: 2vw;
+        background-color: rgb(0, 0, 0);
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly; /* Ajuste para separar las líneas verticalmente */
+        align-items: center;
+        z-index: 100000000000;
     }
     .eslogan{
         padding-left: 5vw;
@@ -768,6 +930,9 @@ footer {
     .proceso__cards-text p{
         font-size: 7px;
     }
+    .nosotros {
+        height: 100vh;
+    }
     .nosotros__info {
         padding-right: 30px;
         padding-left: 30px;
@@ -787,6 +952,7 @@ footer {
     }
     aside .whatsapp{
         left: 80vw;
+        z-index: 100;
     }
 
     .scrollbar__line{
@@ -807,7 +973,12 @@ footer {
         text-align: center;
         padding: 16px 8px 32px 8px;
     }
-
+    #original {
+        display: none;
+    }
+    #mobile {
+        display: block;
+    }
     .footer-bottom {
         display: flex;
         flex-direction: column-reverse;
@@ -852,6 +1023,9 @@ footer {
     }
     .proceso__cards-text p{
         font-size: 14px;
+    }
+    .nosotros {
+        height: 100vh;
     }
     .nosotros__info {
         padding-right: 50px;
